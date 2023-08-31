@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+class Aluno
+{
+    public string Nome { get; set; }
+    public int Matricula { get; set; }
+}
+
+class Escola
+{
+    public List<Aluno> Alunos { get; set; } = new List<Aluno>();
+
+    public void MatricularAluno(Aluno aluno)
+    {
+        Alunos.Add(aluno);
+    }
+
+    public void DesmatricularAluno(Aluno aluno)
+    {
+        Alunos.Remove(aluno);
+    }
+}
